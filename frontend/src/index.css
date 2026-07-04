@@ -1,0 +1,64 @@
+/* ── Google Fonts are loaded in index.html ── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:       #0A0F1E;
+  --navy2:      #111827;
+  --navy3:      #1a2235;
+  --cyan:       #00D4FF;
+  --cyan-dim:   rgba(0, 212, 255, 0.12);
+  --amber-c:    #FF8C00;
+  --amber-dim:  rgba(255, 140, 0, 0.12);
+  --red-c:      #FF2D55;
+  --red-dim:    rgba(255, 45, 85, 0.12);
+  --green-c:    #00E676;
+  --green-dim:  rgba(0, 230, 118, 0.12);
+  --text:       #E8EDF5;
+  --text-muted: #7A8BA0;
+  --border:     rgba(0, 212, 255, 0.15);
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--navy);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Range input cross-browser reset */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: var(--navy3);
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid var(--border);
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--cyan);
+  cursor: pointer;
+  border: 2px solid var(--navy);
+}
+input[type='range']::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--cyan);
+  cursor: pointer;
+  border: 2px solid var(--navy);
+}
+
+/* Animations */
+@keyframes pulse-dot  { 0%,100%{opacity:1;transform:scale(1)}  50%{opacity:.5;transform:scale(.8)} }
+@keyframes blink      { 0%,100%{opacity:1}                      50%{opacity:.4} }
+@keyframes risk-pulse { 0%,100%{opacity:1}                      50%{opacity:.6} }
+@keyframes hitl-glow  { 0%,100%{border-color:var(--red-c)}      50%{border-color:rgba(255,45,85,.3)} }
+@keyframes scan       { to { left: 150%; } }
+@keyframes slideIn    { from{opacity:0;transform:translateX(-8px)} to{opacity:1;transform:translateX(0)} }

@@ -1,0 +1,121 @@
+.card {
+  background: var(--navy2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  opacity: 0.3;
+  transform: translateX(-8px);
+  transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--cyan);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.active {
+  opacity: 1;
+  transform: translateX(0);
+  border-color: var(--cyan);
+}
+.active::before { opacity: 1; }
+.done {
+  opacity: 1;
+  transform: translateX(0);
+}
+.done::before { opacity: 1; }
+
+.scanLine {
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,212,255,0.08), transparent);
+  animation: scan 2s linear infinite;
+  pointer-events: none;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.agentNum {
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  color: var(--cyan);
+  background: var(--cyan-dim);
+  border: 1px solid rgba(0,212,255,0.3);
+  border-radius: 4px;
+  padding: 2px 7px;
+  letter-spacing: 1px;
+}
+
+.agentName {
+  font-family: 'Orbitron', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 1px;
+}
+
+.status {
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.statusStandby    { color: var(--text-muted); }
+.statusProcessing { color: var(--cyan); animation: blink 0.8s infinite; }
+.statusDone       { color: var(--green-c); }
+
+/* ── Agent bodies ── */
+.placeholder  { font-size: 12px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+.escalating   { font-size: 12px; color: var(--red-c);      font-family: 'JetBrains Mono', monospace; }
+.statusMsg    { font-size: 12px; font-family: 'JetBrains Mono', monospace; }
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.kv         { display: flex; flex-direction: column; gap: 3px; }
+.kvKey      { color: var(--text-muted); font-size: 10px; letter-spacing: 0.5px; }
+.kvVal      { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text); font-weight: 600; }
+
+.barTrack   { height: 6px; background: var(--navy3); border-radius: 3px; overflow: hidden; margin-top: 6px; }
+.barFill    { height: 100%; border-radius: 3px; transition: width 0.8s ease; }
+
+.thresholds {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 9px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.recList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+.recItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text);
+  background: rgba(255,255,255,0.04);
+  border-radius: 6px;
+  padding: 8px 10px;
+}

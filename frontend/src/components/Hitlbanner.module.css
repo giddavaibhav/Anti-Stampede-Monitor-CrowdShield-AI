@@ -1,0 +1,60 @@
+.banner {
+  background: var(--red-dim);
+  border: 1px solid var(--red-c);
+  border-radius: 10px;
+  padding: 14px 16px;
+  animation: hitl-glow 1.5s infinite;
+}
+
+.title {
+  font-family: 'Orbitron', monospace;
+  font-size: 11px;
+  color: var(--red-c);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.msg {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+}
+
+.approve, .deny {
+  flex: 1;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.approve {
+  background: rgba(0, 230, 118, 0.15);
+  color: var(--green-c);
+  border: 1px solid rgba(0, 230, 118, 0.4);
+}
+.approve:hover { background: rgba(0, 230, 118, 0.25); }
+
+.deny {
+  background: rgba(255, 45, 85, 0.1);
+  color: var(--red-c);
+  border: 1px solid rgba(255, 45, 85, 0.3);
+}
+.deny:hover { background: rgba(255, 45, 85, 0.2); }

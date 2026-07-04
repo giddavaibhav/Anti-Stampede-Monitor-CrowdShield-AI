@@ -1,0 +1,43 @@
+.header {
+  background: var(--navy2);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-family: 'Orbitron', monospace;
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--cyan);
+  letter-spacing: 2px;
+}
+
+.logoLight {
+  color: var(--text);
+  font-weight: 400;
+}
+
+.statusGroup {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green-c);
+  animation: pulse-dot 2s infinite;
+}
+
+.statusLabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--green-c);
+  letter-spacing: 1px;
+}
