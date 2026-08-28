@@ -1,4 +1,4 @@
-# CrowdShield AI: AI-Powered Anti-Stampede Multi-Agent Safety System
+# Anti-Stampede Monitor – CrowdShield AI
 
 **Track:** Agents for Good | **Kaggle Capstone Project**
 
