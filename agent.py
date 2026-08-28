@@ -1,5 +1,5 @@
 # =============================================================================
-# CrowdShield AI — Anti-Stampede Multi-Agent Safety System
+# Anti-Stampede Monitor – CrowdShield AI
 # Kaggle AI Agents Capstone Project
 #
 # Architecture: Sequential Multi-Agent Pipeline
