@@ -1,5 +1,5 @@
 # =============================================================================
-# CrowdShield AI — FastAPI Backend
+# Anti-Stampede Monitor — FastAPI Backend
 # Exposes the multi-agent pipeline over HTTP.
 #
 # Run:  uvicorn backend.main:app --reload
